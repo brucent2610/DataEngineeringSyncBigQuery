@@ -16,3 +16,12 @@ bq --location=$REGION mk \
     --description="Tiki Products" \
     $PROJECT_ID:$DATASET_ID
 ```
+
+4. Create Table
+```
+bq mk \
+    --table \
+    --description "Tiki Products" \
+    $PROJECT_ID:$DATASET_ID.$TABLE_ID \
+    schema.json
+```

@@ -31,12 +31,38 @@ const bigquery = new BigQuery();
 const storage = new Storage();
 
 exports.index = (file, context) => {
-  console.log(`  Event: ${context.eventId}`);
-  console.log(`  Event Type: ${context.eventType}`);
-  console.log(`  Bucket: ${file.bucket}`);
-  console.log(`  File: ${file.name}`);
-  console.log(`  Metageneration: ${file.metageneration}`);
-  console.log(`  Created: ${file.timeCreated}`);
-  console.log(`  Updated: ${file.updated}`);
+    console.log(`  Event: ${context.eventId}`);
+    console.log(`  Event Type: ${context.eventType}`);
+    console.log(`  Bucket: ${file.bucket}`);
+    console.log(`  File: ${file.name}`);
+    console.log(`  Metageneration: ${file.metageneration}`);
+    console.log(`  Created: ${file.timeCreated}`);
+	console.log(`  Updated: ${file.updated}`);
+
+	const bucketName = file.bucket;
+	const filename = file.name;
+	
+	const metadata = {
+		sourceFormat: 'CSV',
+		skipLeadingRows: 1,
+		schema: {
+			fields: [
+				{name: 'SKU', type: 'STRING'},
+				{name: 'name', type: 'STRING'},
+				{name: 'orderedQuantity', type: 'NUMERIC'},
+				{name: 'stockLevel', type: 'NUMERIC'},
+				{name: 'restockingLeadTime', type: 'NUMERIC'}
+			],
+		}
+	};
+
+	// Load data from a Google Cloud Storage file into the table
+	const [job] = await bigquery
+		.dataset(process.env.DATASET_ID)
+		.table(process.env.TABLE_ID)
+		.load(storage.bucket(bucketName).file(filename), metadata);
+
+	// load() waits for the job to finish
+	console.log(`Job ${job.id} completed.`);
 };
 // [END functions_helloworld_storage]
