@@ -22,7 +22,7 @@
  * @param {object} file The Cloud Storage file metadata.
  * @param {object} context The event metadata.
  */
-exports.helloGCS = (file, context) => {
+exports.index = (file, context) => {
   console.log(`  Event: ${context.eventId}`);
   console.log(`  Event Type: ${context.eventType}`);
   console.log(`  Bucket: ${file.bucket}`);
