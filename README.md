@@ -29,4 +29,8 @@ Data is uploaded and used in MongoDB in VM
 # Architecture
 - [Architecture Version 01](https://i.imgur.com/hXIqMrh.png)
 
-# Prepatations
+# Reference
+- https://cloud.google.com/functions/docs/reference/iam/roles
+- https://cloud.google.com/functions/docs/tutorials/storage
+- https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv#bigquery_load_table_partitioned-nodejs
+
