@@ -30,7 +30,7 @@ const {Storage} = require('@google-cloud/storage');
 const bigquery = new BigQuery();
 const storage = new Storage();
 
-exports.index = (file, context) => {
+exports.index = async (file, context) => {
     console.log(`  Event: ${context.eventId}`);
     console.log(`  Event Type: ${context.eventType}`);
     console.log(`  Bucket: ${file.bucket}`);
