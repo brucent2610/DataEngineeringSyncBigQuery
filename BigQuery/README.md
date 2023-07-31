@@ -11,7 +11,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member serviceAccount:$SERV
 
 3. Create Dataset
 ```
-bq --location=LOCATION mk \
+bq --location=$REGION mk \
     --dataset \
     --description="Tiki Products" \
     $PROJECT_ID:$DATASET_ID

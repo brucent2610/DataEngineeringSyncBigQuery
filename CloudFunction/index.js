@@ -22,6 +22,14 @@
  * @param {object} file The Cloud Storage file metadata.
  * @param {object} context The event metadata.
  */
+// Import the Google Cloud client libraries
+const {BigQuery} = require('@google-cloud/bigquery');
+const {Storage} = require('@google-cloud/storage');
+
+// Instantiate clients
+const bigquery = new BigQuery();
+const storage = new Storage();
+
 exports.index = (file, context) => {
   console.log(`  Event: ${context.eventId}`);
   console.log(`  Event Type: ${context.eventType}`);
