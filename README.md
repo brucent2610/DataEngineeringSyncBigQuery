@@ -28,3 +28,5 @@ Data is uploaded and used in MongoDB in VM
 
 # Architecture
 - [Architecture Version 01](https://i.imgur.com/hXIqMrh.png)
+
+# Prepatations

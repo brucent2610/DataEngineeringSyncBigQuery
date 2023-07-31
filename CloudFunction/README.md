@@ -1,0 +1,1 @@
+1. Prepare the evironment variables
