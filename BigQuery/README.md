@@ -25,3 +25,8 @@ bq mk \
     $PROJECT_ID:$DATASET_ID.$TABLE_ID \
     schema.json
 ```
+
+5. Delete Table
+```
+bq rm -f -t $PROJECT_ID:$DATASET_ID.$TABLE_ID
+```

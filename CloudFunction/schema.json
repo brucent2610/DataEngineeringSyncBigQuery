@@ -113,13 +113,13 @@
     },
     {
         "name": "discount",
-        "type": "INTEGER",
+        "type": "NUMERIC",
         "mode": "NULLABLE",
         "defaultValueExpression": "0"
     },
     {
         "name": "discount_rate",
-        "type": "INTEGER",
+        "type": "NUMERIC",
         "mode": "NULLABLE",
         "defaultValueExpression": "0"
     },
@@ -320,7 +320,7 @@
             {
                 "name": "value",
                 "type": "NUMERIC",
-                "mode": "INTEGER"
+                "mode": "NUMERIC"
             }
         ]
     },
@@ -374,7 +374,7 @@
                     },
                     {
                         "name": "reviews_count",
-                        "type": "INTEGER",
+                        "type": "NUMERIC",
                         "mode": "NULLABLE",
                         "description": "reviews_count"
                     },
@@ -414,7 +414,7 @@
     },
     {
         "name": "availability",
-        "type": "INTEGER",
+        "type": "NUMERIC",
         "mode": "NULLABLE",
         "defaultValueExpression": "0"
     },
@@ -426,7 +426,7 @@
     },
     {
         "name": "product_reco_score",
-        "type": "INTEGER",
+        "type": "NUMERIC",
         "mode": "NULLABLE",
         "defaultValueExpression": "0"
     },
@@ -511,7 +511,7 @@
             },
             {
                 "name": "is_default_select_addon",
-                "type": "INTEGER",
+                "type": "NUMERIC",
                 "mode": "NULLABLE",
                 "description": "is_default_select_addon"
             }
@@ -537,17 +537,17 @@
         "fields": [
             {
                 "name": "sep",
-                "type": "INTEGER",
+                "type": "NUMERIC",
                 "mode": "NULLABLE"
             },
             {
                 "name": "rate",
-                "type": "INTEGER",
+                "type": "NUMERIC",
                 "mode": "NULLABLE"
             },
             {
                 "name": "astra_convert_rate",
-                "type": "INTEGER",
+                "type": "NUMERIC",
                 "mode": "NULLABLE"
             },
             {
@@ -593,12 +593,12 @@
                 "fields": [
                     {
                         "name": "height",
-                        "type": "INTEGER",
+                        "type": "NUMERIC",
                         "mode": "NULLABLE"
                     },
                     {
                         "name": "width",
-                        "type": "INTEGER",
+                        "type": "NUMERIC",
                         "mode": "NULLABLE"
                     },
                     {
@@ -634,7 +634,7 @@
                 "fields": [
                     {
                         "name": "partner_rewards_amount",
-                        "type": "INTEGER",
+                        "type": "NUMERIC",
                         "mode": "NULLABLE"
                     },
                     {
@@ -781,7 +781,7 @@
             },
             {
                 "name": "category_id",
-                "type": "INTEGER",
+                "type": "NUMERIC",
                 "mode": "NULLABLE"
             }
         ]
@@ -878,13 +878,13 @@
     },
     {
         "name": "data_version",
-        "type": "INTEGER",
+        "type": "NUMERIC",
         "mode": "NULLABLE",
         "defaultValueExpression": "0"
     },
     {
         "name": "day_ago_created",
-        "type": "INTEGER",
+        "type": "NUMERIC",
         "mode": "NULLABLE",
         "defaultValueExpression": "0"
     },
@@ -1220,7 +1220,7 @@
     },
     {
         "name": "status",
-        "type": "INTEGER",
+        "type": "NUMERIC",
         "mode": "NULLABLE",
         "defaultValueExpression": "0"
     }
