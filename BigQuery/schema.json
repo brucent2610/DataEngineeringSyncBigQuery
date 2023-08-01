@@ -42,12 +42,6 @@
         "description": "author_name"
     },
     {
-        "name": "author_name",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "author_name"
-    },
-    {
         "name": "brand_name",
         "type": "STRING",
         "mode": "NULLABLE",
@@ -73,18 +67,18 @@
     },
     {
         "name": "badges",
-        "type": "NUMERIC",
+        "type": "RECORD",
         "mode": "REPEATED",
         "description": "badges",
         "fields": [
             {
-                "code": "name",
+                "name": "name",
                 "type": "STRING",
                 "mode": "NULLABLE",
                 "description": "name"
             },
             {
-                "code": "text",
+                "name": "text",
                 "type": "STRING",
                 "mode": "NULLABLE",
                 "description": "text"
@@ -98,13 +92,13 @@
         "description": "badges_new",
         "fields": [
             {
-                "code": "name",
+                "name": "name",
                 "type": "STRING",
                 "mode": "NULLABLE",
                 "description": "name"
             },
             {
-                "code": "text",
+                "name": "text",
                 "type": "STRING",
                 "mode": "NULLABLE",
                 "description": "text"
@@ -114,38 +108,32 @@
     {
         "name": "discount",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "discount_rate",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "rating_average",
         "type": "FLOAT",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "review_count",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "order_count",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "favourite_count",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "thumbnail_url",
@@ -156,29 +144,17 @@
     {
         "name": "thumbnail_width",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "thumbnail_height",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
-    },
-    {
-        "name": "freegift_items",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "badges_new",
-        "fields": [
-            
-        ]
+        "mode": "NULLABLE"
     },
     {
         "name": "has_ebook",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "inventory_status",
@@ -189,15 +165,13 @@
     {
         "name": "is_visible",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "productset_id",
         "type": "BIGNUMERIC",
         "mode": "REQUIRED",
-        "description": "productset_id",
-        "defaultValueExpression": "0"
+        "description": "productset_id"
     },
     {
         "name": "productset_group_name",
@@ -214,14 +188,12 @@
     {
         "name": "is_flower",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "is_gift_card",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "inventory",
@@ -285,8 +257,7 @@
         "name": "seller_product_id",
         "type": "BIGNUMERIC",
         "mode": "NULLABLE",
-        "description": "seller_product_id",
-        "defaultValueExpression": "0"
+        "description": "seller_product_id"
     },
     {
         "name": "installment_info",
@@ -303,8 +274,7 @@
     {
         "name": "bundle_deal",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "quantity_sold",
@@ -320,7 +290,7 @@
             {
                 "name": "value",
                 "type": "NUMERIC",
-                "mode": "NUMERIC"
+                "mode": "NULLABLE"
             }
         ]
     },
@@ -339,8 +309,7 @@
     {
         "name": "shippable",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "impression_info",
@@ -415,8 +384,7 @@
     {
         "name": "availability",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "primary_category_path",
@@ -427,99 +395,13 @@
     {
         "name": "product_reco_score",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "seller_id",
         "type": "BIGNUMERIC",
         "mode": "NULLABLE",
-        "description": "seller_id",
-        "defaultValueExpression": "0"
-    },
-    {
-        "name": "impression_info",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "impression_info",
-        "fields": [
-            {
-                "name": "id",
-                "type": "BIGNUMERIC",
-                "mode": "NULLABLE",
-                "description": "id",
-                "defaultValueExpression": "0"
-            },
-            {
-                "name": "name",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "name"
-            },
-            {
-                "name": "thumbnail_url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "thumbnail_url"
-            },
-            {
-                "name": "price",
-                "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "description": "price",
-                "defaultValueExpression": "0"
-            },
-            {
-                "name": "add_on_description",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "add_on_description"
-            },
-            {
-                "name": "add_on_description_list",
-                "type": "STRING",
-                "mode": "REPEATED",
-                "description": "add_on_description"
-            },
-            {
-                "name": "list_price",
-                "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "description": "list_price",
-                "defaultValueExpression": "0"
-            },
-            {
-                "name": "is_visible",
-                "type": "BOOLEAN",
-                "mode": "NULLABLE",
-                "defaultValueExpression": "false"
-            },
-            {
-                "name": "url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "url"
-            },
-            {
-                "name": "add_on_information_title",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "add_on_information_title"
-            },
-            {
-                "name": "add_on_information_url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "add_on_information_url"
-            },
-            {
-                "name": "is_default_select_addon",
-                "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "description": "is_default_select_addon",
-                "defaultValueExpression": "0"
-            }
-        ]
+        "description": "seller_id"
     },
     {
         "name": "add_on_title",
@@ -530,8 +412,7 @@
     {
         "name": "all_time_quantity_sold",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "asa_cashback_widget",
@@ -542,20 +423,17 @@
             {
                 "name": "sep",
                 "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "defaultValueExpression": "0"
+                "mode": "NULLABLE"
             },
             {
                 "name": "rate",
                 "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "defaultValueExpression": "0"
+                "mode": "NULLABLE"
             },
             {
                 "name": "astra_convert_rate",
                 "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "defaultValueExpression": "0"
+                "mode": "NULLABLE"
             },
             {
                 "name": "text_color",
@@ -601,14 +479,12 @@
                     {
                         "name": "height",
                         "type": "NUMERIC",
-                        "mode": "NULLABLE",
-                        "defaultValueExpression": "0"
+                        "mode": "NULLABLE"
                     },
                     {
                         "name": "width",
                         "type": "NUMERIC",
-                        "mode": "NULLABLE",
-                        "defaultValueExpression": "0"
+                        "mode": "NULLABLE"
                     },
                     {
                         "name": "url",
@@ -644,20 +520,17 @@
                     {
                         "name": "partner_rewards_amount",
                         "type": "NUMERIC",
-                        "mode": "NULLABLE",
-                        "defaultValueExpression": "0"
+                        "mode": "NULLABLE"
                     },
                     {
                         "name": "tiki_rewards_amount",
                         "type": "FLOAT",
-                        "mode": "NULLABLE",
-                        "defaultValueExpression": "0"
+                        "mode": "NULLABLE"
                     },
                     {
                         "name": "total_rewards_amount",
                         "type": "FLOAT",
-                        "mode": "NULLABLE",
-                        "defaultValueExpression": "0"
+                        "mode": "NULLABLE"
                     }
                 ]
             },
@@ -703,7 +576,7 @@
                         "mode": "NULLABLE"
                     },
                     {
-                        "name": "icon_title",
+                        "name": "list",
                         "type": "RECORD",
                         "mode": "REPEATED",
                         "fields": [
@@ -730,10 +603,10 @@
         ]
     },
     {
-        "name": "impression_info",
+        "name": "benefits",
         "type": "RECORD",
         "mode": "REPEATED",
-        "description": "impression_info",
+        "description": "benefits",
         "fields": [
             {
                 "name": "icon",
@@ -750,10 +623,10 @@
         ]
     },
     {
-        "name": "impression_info",
+        "name": "brand",
         "type": "RECORD",
         "mode": "NULLABLE",
-        "description": "impression_info",
+        "description": "brand",
         "fields": [
             {
                 "name": "id",
@@ -794,8 +667,7 @@
             {
                 "name": "category_id",
                 "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "defaultValueExpression": "0"
+                "mode": "NULLABLE"
             }
         ]
     },
@@ -821,8 +693,7 @@
                 "name": "is_leaf",
                 "type": "BOOLEAN",
                 "mode": "NULLABLE",
-                "description": "is_leaf",
-                "defaultValueExpression": "false"
+                "description": "is_leaf"
             }
         ]
     },
@@ -866,8 +737,7 @@
                 "name": "price",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "price",
-                "defaultValueExpression": "0"
+                "description": "price"
             },
             {
                 "name": "product_id",
@@ -879,29 +749,25 @@
                 "name": "store_id",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "store_id",
-                "defaultValueExpression": "0"
+                "description": "store_id"
             },
             {
                 "name": "is_offline_installment_supported",
                 "type": "BOOLEAN",
                 "mode": "NULLABLE",
-                "description": "is_offline_installment_supported",
-                "defaultValueExpression": "false"
+                "description": "is_offline_installment_supported"
             }
         ]
     },
     {
         "name": "data_version",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "day_ago_created",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     },
     {
         "name": "description",
@@ -918,8 +784,7 @@
     {
         "name": "has_buynow",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "images",
@@ -937,8 +802,7 @@
                 "name": "is_gallery",
                 "type": "BOOLEAN",
                 "mode": "NULLABLE",
-                "description": "is_gallery",
-                "defaultValueExpression": "false"
+                "description": "is_gallery"
             },
             {
                 "name": "label",
@@ -987,45 +851,38 @@
     {
         "name": "is_acoholic_drink",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
 	{
         "name": "is_baby_milk",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "is_fresh",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "is_seller_in_chat_whitelist",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "is_tier_pricing_available",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "is_tier_pricing_eligible",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "master_id",
         "type": "BIGNUMERIC",
         "mode": "NULLABLE",
-        "description": "master_id",
-        "defaultValueExpression": "0"
+        "description": "master_id"
     },
     {
         "name": "meta_description",
@@ -1055,8 +912,7 @@
                 "name": "id",
                 "type": "BIGNUMERIC",
                 "mode": "NULLABLE",
-                "description": "id",
-                "defaultValueExpression": "0"
+                "description": "id"
             },
             {
                 "name": "name",
@@ -1080,8 +936,7 @@
                 "name": "price",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "price",
-                "defaultValueExpression": "0"
+                "description": "price"
             },
             {
                 "name": "product_id",
@@ -1093,16 +948,15 @@
                 "name": "store_id",
                 "type": "BIGNUMERIC",
                 "mode": "NULLABLE",
-                "description": "store_id",
-                "defaultValueExpression": "0"
+                "description": "store_id"
             }
         ]
     },
     {
-        "name": "current_seller",
+        "name": "price_comparison",
         "type": "RECORD",
         "mode": "NULLABLE",
-        "description": "current_seller",
+        "description": "price_comparison",
         "fields": [
             {
                 "name": "title",
@@ -1121,8 +975,7 @@
     {
         "name": "progress_image_status",
         "type": "BOOLEAN",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "false"
+        "mode": "NULLABLE"
     },
     {
         "name": "return_and_exchange_policy",
@@ -1237,7 +1090,6 @@
     {
         "name": "status",
         "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "defaultValueExpression": "0"
+        "mode": "NULLABLE"
     }
 ]
