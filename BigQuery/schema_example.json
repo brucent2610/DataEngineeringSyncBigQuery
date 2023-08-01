@@ -1,0 +1,32 @@
+[
+    {
+        "name": "SKU",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "SKU"
+    },
+    {
+        "name": "name",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "name"
+    },
+    {
+        "name": "orderedQuantity",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "defaultValueExpression": "0"
+    },
+    {
+        "name": "stockLevel",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "defaultValueExpression": "0"
+    },
+    {
+        "name": "restockingLeadTime",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "defaultValueExpression": "0"
+    }
+]

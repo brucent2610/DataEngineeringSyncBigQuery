@@ -30,6 +30,8 @@ const {Storage} = require('@google-cloud/storage');
 const bigquery = new BigQuery();
 const storage = new Storage();
 
+const schema = require('./schema.json');
+
 exports.index = async (file, context) => {
     console.log(`  Event: ${context.eventId}`);
     console.log(`  Event Type: ${context.eventType}`);
@@ -43,17 +45,8 @@ exports.index = async (file, context) => {
 	const filename = file.name;
 	
 	const metadata = {
-		sourceFormat: 'CSV',
-		skipLeadingRows: 1,
-		schema: {
-			fields: [
-				{name: 'SKU', type: 'STRING'},
-				{name: 'name', type: 'STRING'},
-				{name: 'orderedQuantity', type: 'NUMERIC'},
-				{name: 'stockLevel', type: 'NUMERIC'},
-				{name: 'restockingLeadTime', type: 'NUMERIC'}
-			],
-		}
+		sourceFormat: 'JSON',
+		schema: schema
 	};
 
 	// Load data from a Google Cloud Storage file into the table

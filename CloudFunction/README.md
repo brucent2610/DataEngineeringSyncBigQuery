@@ -12,7 +12,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member serviceAccount:$SERV
 ```
 gcloud functions deploy ${FUNCTION_EVENT_BUCKET_FINALIZED_NAME} \
 --gen2 \
---runtime=nodejs20 \
+--runtime=nodejs18 \
 --region=${REGION} \
 --source=. \
 --entry-point=index \
