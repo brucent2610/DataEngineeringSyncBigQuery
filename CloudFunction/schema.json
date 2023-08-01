@@ -447,7 +447,8 @@
                 "name": "id",
                 "type": "BIGNUMERIC",
                 "mode": "NULLABLE",
-                "description": "id"
+                "description": "id",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "name",
@@ -465,7 +466,8 @@
                 "name": "price",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "price"
+                "description": "price",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "add_on_description",
@@ -483,7 +485,8 @@
                 "name": "list_price",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "list_price"
+                "description": "list_price",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "is_visible",
@@ -513,7 +516,8 @@
                 "name": "is_default_select_addon",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "is_default_select_addon"
+                "description": "is_default_select_addon",
+                "defaultValueExpression": "0"
             }
         ]
     },
@@ -538,17 +542,20 @@
             {
                 "name": "sep",
                 "type": "NUMERIC",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "rate",
                 "type": "NUMERIC",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "astra_convert_rate",
                 "type": "NUMERIC",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "text_color",
@@ -594,12 +601,14 @@
                     {
                         "name": "height",
                         "type": "NUMERIC",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "defaultValueExpression": "0"
                     },
                     {
                         "name": "width",
                         "type": "NUMERIC",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "defaultValueExpression": "0"
                     },
                     {
                         "name": "url",
@@ -635,17 +644,20 @@
                     {
                         "name": "partner_rewards_amount",
                         "type": "NUMERIC",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "defaultValueExpression": "0"
                     },
                     {
                         "name": "tiki_rewards_amount",
                         "type": "FLOAT",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "defaultValueExpression": "0"
                     },
                     {
                         "name": "total_rewards_amount",
                         "type": "FLOAT",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "defaultValueExpression": "0"
                     }
                 ]
             },
@@ -782,7 +794,8 @@
             {
                 "name": "category_id",
                 "type": "NUMERIC",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "defaultValueExpression": "0"
             }
         ]
     },
@@ -853,7 +866,8 @@
                 "name": "price",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "price"
+                "description": "price",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "product_id",
@@ -865,7 +879,8 @@
                 "name": "store_id",
                 "type": "NUMERIC",
                 "mode": "NULLABLE",
-                "description": "store_id"
+                "description": "store_id",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "is_offline_installment_supported",
@@ -1040,7 +1055,8 @@
                 "name": "id",
                 "type": "BIGNUMERIC",
                 "mode": "NULLABLE",
-                "description": "id"
+                "description": "id",
+                "defaultValueExpression": "0"
             },
             {
                 "name": "name",
