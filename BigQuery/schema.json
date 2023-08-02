@@ -1,1095 +1,1306 @@
 [
     {
-        "name": "id",
-        "type": "BIGNUMERIC",
-        "mode": "REQUIRED",
-        "description": "id"
-    },
-    {
-        "name": "sku",
-        "type": "STRING",
-        "mode": "REQUIRED",
-        "description": "sku"
-    },
-    {
-        "name": "name",
-        "type": "STRING",
-        "mode": "REQUIRED",
-        "description": "name"
-    },
-    {
-        "name": "url_key",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "url_key"
-    },
-    {
-        "name": "url_path",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "url_path"
-    },
-    {
-        "name": "type",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "type"
-    },
-    {
-        "name": "author_name",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "author_name"
-    },
-    {
-        "name": "brand_name",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "brand_name"
-    },
-    {
-        "name": "short_description",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "short_description"
-    },
-    {
-        "name": "price",
-        "type": "NUMERIC",
-        "mode": "REQUIRED",
-        "description": "short_description"
-    },
-    {
-        "name": "list_price",
-        "type": "NUMERIC",
-        "mode": "REQUIRED",
-        "description": "list_price"
-    },
-    {
-        "name": "badges",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "badges",
         "fields": [
             {
-                "name": "name",
-                "type": "STRING",
                 "mode": "NULLABLE",
-                "description": "name"
+                "name": "thumbnail_url",
+                "type": "STRING"
             },
             {
-                "name": "text",
-                "type": "STRING",
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "name",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "id",
+                        "type": "INTEGER"
+                    }
+                ],
                 "mode": "NULLABLE",
-                "description": "text"
-            }
-        ]
-    },
-    {
-        "name": "badges_new",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "badges_new",
-        "fields": [
-            {
-                "name": "name",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "name"
+                "name": "seller",
+                "type": "RECORD"
             },
             {
-                "name": "text",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "text"
-            }
-        ]
-    },
-    {
-        "name": "discount",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "discount_rate",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "rating_average",
-        "type": "FLOAT",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "review_count",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "order_count",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "favourite_count",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "thumbnail_url",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "thumbnail_url"
-    },
-    {
-        "name": "thumbnail_width",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "thumbnail_height",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "has_ebook",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "inventory_status",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "inventory_status"
-    },
-    {
-        "name": "is_visible",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "productset_id",
-        "type": "BIGNUMERIC",
-        "mode": "REQUIRED",
-        "description": "productset_id"
-    },
-    {
-        "name": "productset_group_name",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "productset_group_name"
-    },
-    {
-        "name": "seller",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "seller"
-    },
-    {
-        "name": "is_flower",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "is_gift_card",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "inventory",
-        "type": "RECORD",
-        "description": "inventory",
-        "mode": "NULLABLE",
-        "fields": [
-            {
-                "name": "product_virtual_type",
-                "type": "STRING",
-                "mode": "NULLABLE"
-            },
-            {
-                "name": "fulfillment_type",
-                "type": "STRING",
-                "mode": "NULLABLE"
-            }
-        ]
-    },
-    {
-        "name": "url_attendant_input_form",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "url_attendant_input_form"
-    },
-    {
-        "name": "stock_item",
-        "type": "RECORD",
-        "description": "stock_item",
-        "mode": "NULLABLE",
-        "fields": [
-            {
-                "name": "max_sale_qty",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
-            },
-            {
-                "name": "min_sale_qty",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
-            },
-            {
-                "name": "preorder_date",
-                "type": "STRING",
-                "mode": "NULLABLE"
-            },
-            {
-                "name": "qty",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
-            }
-        ]
-    },
-    {
-        "name": "salable_type",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "salable_type"
-    },
-    {
-        "name": "seller_product_id",
-        "type": "BIGNUMERIC",
-        "mode": "NULLABLE",
-        "description": "seller_product_id"
-    },
-    {
-        "name": "installment_info",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "installment_info"
-    },
-    {
-        "name": "url_review",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "url_review"
-    },
-    {
-        "name": "bundle_deal",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "quantity_sold",
-        "type": "RECORD",
-        "description": "quantity_sold",
-        "mode": "NULLABLE",
-        "fields": [
-            {
-                "name": "text",
-                "type": "STRING",
-                "mode": "NULLABLE"
-            },
-            {
-                "name": "value",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
-            }
-        ]
-    },
-    {
-        "name": "video_url",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "video_url"
-    },
-    {
-        "name": "original_price",
-        "type": "NUMERIC",
-        "mode": "NULLABLE",
-        "description": "original_price"
-    },
-    {
-        "name": "shippable",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "impression_info",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "impression_info",
-        "fields": [
-            {
-                "name": "impression_id",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "impression_id"
-            },
-            {
-                "name": "metadata",
-                "type": "RECORD",
                 "mode": "REPEATED",
-                "description": "metadata",
-                "fields": [
-                    {
-                        "name": "price",
-                        "type": "NUMERIC",
-                        "mode": "NULLABLE",
-                        "description": "original_price"
-                    },
-                    {
-                        "name": "rating_average",
-                        "type": "FLOAT",
-                        "mode": "NULLABLE",
-                        "description": "rating_average"
-                    },
-                    {
-                        "name": "reviews_count",
-                        "type": "NUMERIC",
-                        "mode": "NULLABLE",
-                        "description": "reviews_count"
-                    },
-                    {
-                        "name": "seller_product_id",
-                        "type": "BIGNUMERIC",
-                        "mode": "NULLABLE",
-                        "description": "seller_product_id"
-                    },
-                    {
-                        "name": "product_id",
-                        "type": "BIGNUMERIC",
-                        "mode": "NULLABLE",
-                        "description": "product_id"
-                    },
-                    {
-                        "name": "service_name",
-                        "type": "STRING",
-                        "mode": "NULLABLE",
-                        "description": "service_name"
-                    },
-                    {
-                        "name": "version",
-                        "type": "STRING",
-                        "mode": "NULLABLE",
-                        "description": "version"
-                    }
-                ]
+                "name": "size_chart",
+                "type": "STRING"
             },
             {
-                "name": "checksum",
-                "type": "STRING",
                 "mode": "NULLABLE",
-                "description": "checksum"
+                "name": "price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "option2",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "sku",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "option1",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "inventory_status",
+                "type": "STRING"
+            },
+            {
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "small_url",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "medium_url",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "large_url",
+                        "type": "STRING"
+                    }
+                ],
+                "mode": "REPEATED",
+                "name": "images",
+                "type": "RECORD"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "selected",
+                "type": "BOOLEAN"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "child_id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
             }
-        ]
+        ],
+        "mode": "REPEATED",
+        "name": "configurable_products",
+        "type": "RECORD"
     },
     {
-        "name": "availability",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "primary_category_path",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "primary_category_path"
-    },
-    {
-        "name": "product_reco_score",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "seller_id",
-        "type": "BIGNUMERIC",
-        "mode": "NULLABLE",
-        "description": "seller_id"
-    },
-    {
-        "name": "add_on_title",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "add_on_title"
-    },
-    {
-        "name": "all_time_quantity_sold",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "asa_cashback_widget",
-        "type": "RECORD",
-        "description": "asa_cashback_widget",
-        "mode": "NULLABLE",
         "fields": [
             {
-                "name": "sep",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "label",
+                        "type": "STRING"
+                    }
+                ],
+                "mode": "REPEATED",
+                "name": "values",
+                "type": "RECORD"
             },
             {
-                "name": "rate",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "name": "show_preview_image",
+                "type": "BOOLEAN"
             },
             {
-                "name": "astra_convert_rate",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
             },
             {
-                "name": "text_color",
-                "type": "STRING",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "name": "position",
+                "type": "INTEGER"
             },
             {
-                "name": "short_description",
-                "type": "STRING",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "name": "code",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "configurable_options",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "error",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "progress_mysql_status",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "status",
+        "type": "INTEGER"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "is_best_store",
+                "type": "BOOLEAN"
             },
             {
-                "name": "background_color",
-                "type": "STRING",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "name": "store_id",
+                "type": "INTEGER"
             },
             {
-                "name": "asa_plus_badge",
-                "type": "STRING",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "name": "product_id",
+                "type": "INTEGER"
             },
             {
-                "name": "new_badge",
-                "type": "STRING",
-                "mode": "NULLABLE"
+                "mode": "NULLABLE",
+                "name": "price",
+                "type": "INTEGER"
             },
             {
+                "mode": "NULLABLE",
+                "name": "logo",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "sku",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "is_offline_installment_supported",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "link",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "current_seller",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_crawl_detail",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "best_price_guaranteed",
+        "type": "BOOLEAN"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "value",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "warranty_info",
+        "type": "RECORD"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "value",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "seller_specifications",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "short_url",
+        "type": "STRING"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "services_and_promotions",
+        "type": "STRING"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "product_links",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "meta_title",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "discount",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "warranty_policy",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "master_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "video_url",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_seller_in_chat_whitelist",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_baby_milk",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_acoholic_drink",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "list_price",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "inventory_type",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "details",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "redirect_url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "summary",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "title",
+                "type": "STRING"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "installment_info_v2",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "has_buynow",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "gift_item_title",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "description",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "title",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "sub_title",
+                "type": "STRING"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "price_comparison",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "shippable",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "day_ago_created",
+        "type": "INTEGER"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "category_id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "url",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "breadcrumbs",
+        "type": "RECORD"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "extra_header",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "extra_text",
+                "type": "STRING"
+            },
+            {
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "value",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "url",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "name",
+                        "type": "STRING"
+                    }
+                ],
+                "mode": "REPEATED",
+                "name": "extra",
+                "type": "RECORD"
+            },
+            {
+                "mode": "NULLABLE",
                 "name": "text",
-                "type": "STRING",
-                "mode": "NULLABLE"
+                "type": "STRING"
             },
             {
-                "name": "non_login_url_path",
-                "type": "STRING",
-                "mode": "NULLABLE"
-            },
-            {
+                "mode": "NULLABLE",
                 "name": "icon",
-                "type": "RECORD",
-                "description": "icon",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "benefits",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "add_on_title",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
                 "mode": "NULLABLE",
-                "fields": [
-                    {
-                        "name": "height",
-                        "type": "NUMERIC",
-                        "mode": "NULLABLE"
-                    },
-                    {
-                        "name": "width",
-                        "type": "NUMERIC",
-                        "mode": "NULLABLE"
-                    },
-                    {
-                        "name": "url",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
-                    }
-                ]
+                "name": "thumbnail_url",
+                "type": "STRING"
             },
             {
-                "name": "button",
-                "type": "RECORD",
-                "description": "button",
                 "mode": "NULLABLE",
-                "fields": [
-                    {
-                        "name": "text",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
-                    },
-                    {
-                        "name": "url",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
-                    }
-                ]
+                "name": "medium_url",
+                "type": "STRING"
             },
             {
-                "name": "amplitude",
-                "type": "RECORD",
-                "description": "amplitude",
                 "mode": "NULLABLE",
-                "fields": [
-                    {
-                        "name": "partner_rewards_amount",
-                        "type": "NUMERIC",
-                        "mode": "NULLABLE"
-                    },
-                    {
-                        "name": "tiki_rewards_amount",
-                        "type": "FLOAT",
-                        "mode": "NULLABLE"
-                    },
-                    {
-                        "name": "total_rewards_amount",
-                        "type": "FLOAT",
-                        "mode": "NULLABLE"
-                    }
-                ]
+                "name": "large_url",
+                "type": "STRING"
             },
             {
-                "name": "benefits",
-                "type": "RECORD",
-                "description": "benefits",
                 "mode": "NULLABLE",
+                "name": "label",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "position",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "is_gallery",
+                "type": "BOOLEAN"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "small_url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "base_url",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "images",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "seller_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "product_reco_score",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "advertisement",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_tier_pricing_available",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "primary_category_path",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "url_review",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "all_time_quantity_sold",
+        "type": "INTEGER"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "text",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "code",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "badges",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "original_price",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_fresh",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "seller_product_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "url_key",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "short_description",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "checksum",
+                "type": "STRING"
+            },
+            {
                 "fields": [
                     {
-                        "name": "title",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "name": "version",
+                        "type": "STRING"
                     },
                     {
-                        "name": "sub_title",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "name": "service_name",
+                        "type": "STRING"
                     },
                     {
-                        "name": "benefit_text",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "name": "seller_product_id",
+                        "type": "INTEGER"
                     },
                     {
-                        "name": "sub_icon",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "name": "reviews_count",
+                        "type": "INTEGER"
                     },
                     {
-                        "name": "type",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "name": "product_id",
+                        "type": "INTEGER"
                     },
                     {
-                        "name": "information_url",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "name": "rating_average",
+                        "type": "FLOAT"
                     },
                     {
-                        "name": "icon_title",
-                        "type": "STRING",
-                        "mode": "NULLABLE"
+                        "mode": "NULLABLE",
+                        "name": "price",
+                        "type": "INTEGER"
+                    }
+                ],
+                "mode": "NULLABLE",
+                "name": "metadata",
+                "type": "RECORD"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "impression_id",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "impression_info",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "author_name",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "thumbnail_height",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "productset_group_name",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "installment_info",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "data_version",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "price",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "salable_type",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "book_cover",
+        "type": "STRING"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "option_color",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "tiki_live",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "return_and_exchange_policy",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "url_attendant_input_form",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "is_leaf",
+                "type": "BOOLEAN"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "categories",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_flower",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "availability",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "productset_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_visible",
+        "type": "BOOLEAN"
+    },
+    {
+        "fields": [
+            {
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "name",
+                        "type": "STRING"
                     },
                     {
-                        "name": "list",
-                        "type": "RECORD",
-                        "mode": "REPEATED",
+                        "mode": "NULLABLE",
+                        "name": "value",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "code",
+                        "type": "STRING"
+                    }
+                ],
+                "mode": "REPEATED",
+                "name": "attributes",
+                "type": "RECORD"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "specifications",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "review_text",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "inventory_status",
+        "type": "STRING"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "freegift_items",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "rating_average",
+        "type": "FLOAT"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "thumbnail_url",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_gift_card",
+        "type": "BOOLEAN"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "non_login_url_path",
+                "type": "STRING"
+            },
+            {
+                "fields": [
+                    {
                         "fields": [
                             {
-                                "name": "icon",
-                                "type": "STRING",
-                                "mode": "NULLABLE"
-                            },
-                            {
-                                "name": "text",
-                                "type": "STRING",
-                                "mode": "NULLABLE"
-                            },
-                            {
+                                "mode": "NULLABLE",
                                 "name": "link",
-                                "type": "STRING",
-                                "mode": "NULLABLE"
+                                "type": "STRING"
+                            },
+                            {
+                                "mode": "NULLABLE",
+                                "name": "text",
+                                "type": "STRING"
+                            },
+                            {
+                                "mode": "NULLABLE",
+                                "name": "icon",
+                                "type": "STRING"
                             }
-                        ]
+                        ],
+                        "mode": "REPEATED",
+                        "name": "list",
+                        "type": "RECORD"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "information_url",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "icon_title",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "type",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "sub_icon",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "benefit_text",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "sub_title",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "title",
+                        "type": "STRING"
                     }
-                    
-                ]
-            }
-        ]
-    },
-    {
-        "name": "benefits",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "benefits",
-        "fields": [
-            {
-                "name": "icon",
-                "type": "STRING",
+                ],
                 "mode": "NULLABLE",
-                "description": "icon"
+                "name": "benefits",
+                "type": "RECORD"
             },
             {
-                "name": "text",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "text"
-            }
-        ]
-    },
-    {
-        "name": "brand",
-        "type": "RECORD",
-        "mode": "NULLABLE",
-        "description": "brand",
-        "fields": [
-            {
-                "name": "id",
-                "type": "BIGNUMERIC",
-                "mode": "NULLABLE",
-                "description": "id"
-            },
-            {
-                "name": "icon",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "icon"
-            },
-            {
-                "name": "slug",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "slug"
-            }
-        ]
-    },
-    {
-        "name": "breadcrumbs",
-        "type": "RECORD",
-        "description": "breadcrumbs",
-        "mode": "REPEATED",
-        "fields": [
-            {
-                "name": "text",
-                "type": "STRING",
-                "mode": "NULLABLE"
-            },
-            {
-                "name": "url",
-                "type": "STRING",
-                "mode": "NULLABLE"
-            },
-            {
-                "name": "category_id",
-                "type": "NUMERIC",
-                "mode": "NULLABLE"
-            }
-        ]
-    },
-    {
-        "name": "categories",
-        "type": "RECORD",
-        "mode": "NULLABLE",
-        "description": "categories",
-        "fields": [
-            {
-                "name": "id",
-                "type": "BIGNUMERIC",
-                "mode": "NULLABLE",
-                "description": "id"
-            },
-            {
-                "name": "icon",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "icon"
-            },
-            {
-                "name": "is_leaf",
-                "type": "BOOLEAN",
-                "mode": "NULLABLE",
-                "description": "is_leaf"
-            }
-        ]
-    },
-    {
-        "name": "current_seller",
-        "type": "RECORD",
-        "mode": "NULLABLE",
-        "description": "current_seller",
-        "fields": [
-            {
-                "name": "id",
-                "type": "BIGNUMERIC",
-                "mode": "NULLABLE",
-                "description": "id"
-            },
-            {
-                "name": "sku",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "sku"
-            },
-            {
-                "name": "name",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "name"
-            },
-            {
-                "name": "link",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "link"
-            },
-            {
-                "name": "logo",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "logo"
-            },
-            {
-                "name": "price",
-                "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "description": "price"
-            },
-            {
-                "name": "product_id",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "product_id"
-            },
-            {
-                "name": "store_id",
-                "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "description": "store_id"
-            },
-            {
-                "name": "is_offline_installment_supported",
-                "type": "BOOLEAN",
-                "mode": "NULLABLE",
-                "description": "is_offline_installment_supported"
-            }
-        ]
-    },
-    {
-        "name": "data_version",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "day_ago_created",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "description",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "description"
-    },
-    {
-        "name": "gift_item_title",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "gift_item_title"
-    },
-    {
-        "name": "has_buynow",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "images",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "images",
-        "fields": [
-            {
-                "name": "base_url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "base_url"
-            },
-            {
-                "name": "is_gallery",
-                "type": "BOOLEAN",
-                "mode": "NULLABLE",
-                "description": "is_gallery"
-            },
-            {
-                "name": "label",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "label"
-            },
-            {
-                "name": "position",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "position"
-            },
-            {
-                "name": "large_url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "large_url"
-            },
-            {
-                "name": "medium_url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "medium_url"
-            },
-            {
-                "name": "small_url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "small_url"
-            },
-            {
-                "name": "thumbnail_url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "thumbnail_url"
-            }
-        ]
-    },
-    {
-        "name": "inventory_type",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "inventory_type"
-    },
-    {
-        "name": "is_acoholic_drink",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-	{
-        "name": "is_baby_milk",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "is_fresh",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "is_seller_in_chat_whitelist",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "is_tier_pricing_available",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "is_tier_pricing_eligible",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "master_id",
-        "type": "BIGNUMERIC",
-        "mode": "NULLABLE",
-        "description": "master_id"
-    },
-    {
-        "name": "meta_description",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "meta_description"
-    },
-    {
-        "name": "meta_keywords",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "meta_keywords"
-    },
-    {
-        "name": "meta_title",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "meta_title"
-    },
-    {
-        "name": "other_sellers",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "other_sellers",
-        "fields": [
-            {
-                "name": "id",
-                "type": "BIGNUMERIC",
-                "mode": "NULLABLE",
-                "description": "id"
-            },
-            {
-                "name": "name",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "name"
-            },
-            {
-                "name": "link",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "link"
-            },
-            {
-                "name": "logo",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "logo"
-            },
-            {
-                "name": "price",
-                "type": "NUMERIC",
-                "mode": "NULLABLE",
-                "description": "price"
-            },
-            {
-                "name": "product_id",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "product_id"
-            },
-            {
-                "name": "store_id",
-                "type": "BIGNUMERIC",
-                "mode": "NULLABLE",
-                "description": "store_id"
-            }
-        ]
-    },
-    {
-        "name": "price_comparison",
-        "type": "RECORD",
-        "mode": "NULLABLE",
-        "description": "price_comparison",
-        "fields": [
-            {
-                "name": "title",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "title"
-            },
-            {
-                "name": "sub_title",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "sub_title"
-            }
-        ]
-    },
-    {
-        "name": "progress_image_status",
-        "type": "BOOLEAN",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "return_and_exchange_policy",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "return_and_exchange_policy"
-    },
-    {
-        "name": "review_text",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "review_text"
-    },
-    {
-        "name": "seller_specifications",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "seller_specifications",
-        "fields": [
-            {
-                "name": "name",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "name"
-            },
-            {
-                "name": "url",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "url"
-            },
-            {
-                "name": "value",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "value"
-            }
-        ]
-    },
-    {
-        "name": "short_url",
-        "type": "STRING",
-        "mode": "NULLABLE",
-        "description": "short_url"
-    },
-    {
-        "name": "specifications",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "specifications",
-        "fields": [
-            {
-                "name": "name",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "name"
-            },
-            {
-                "name": "attributes",
-                "type": "RECORD",
-                "mode": "REPEATED",
-                "description": "attributes",
                 "fields": [
                     {
-                        "name": "code",
-                        "type": "STRING",
                         "mode": "NULLABLE",
-                        "description": "code"
+                        "name": "url",
+                        "type": "STRING"
                     },
                     {
-                        "name": "name",
-                        "type": "STRING",
                         "mode": "NULLABLE",
-                        "description": "name"
-                    },
-                    {
-                        "name": "value",
-                        "type": "STRING",
-                        "mode": "NULLABLE",
-                        "description": "value"
+                        "name": "text",
+                        "type": "STRING"
                     }
-                ]
+                ],
+                "mode": "NULLABLE",
+                "name": "button",
+                "type": "RECORD"
+            },
+            {
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "total_rewards_amount",
+                        "type": "FLOAT"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "tiki_rewards_amount",
+                        "type": "FLOAT"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "partner_rewards_amount",
+                        "type": "INTEGER"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "has_freeship_plus_benefit",
+                        "type": "BOOLEAN"
+                    }
+                ],
+                "mode": "NULLABLE",
+                "name": "amplitude",
+                "type": "RECORD"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "asa_plus_badge",
+                "type": "STRING"
+            },
+            {
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "url",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "width",
+                        "type": "INTEGER"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "height",
+                        "type": "INTEGER"
+                    }
+                ],
+                "mode": "NULLABLE",
+                "name": "icon",
+                "type": "RECORD"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "new_badge",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "sep",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "text",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "text_color",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "rate",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "short_description",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "background_color",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "astra_convert_rate",
+                "type": "INTEGER"
             }
-        ]
+        ],
+        "mode": "NULLABLE",
+        "name": "asa_cashback_widget",
+        "type": "RECORD"
     },
     {
-        "name": "warranty_info",
-        "type": "RECORD",
-        "mode": "REPEATED",
-        "description": "warranty_info",
         "fields": [
             {
-                "name": "name",
-                "type": "STRING",
                 "mode": "NULLABLE",
-                "description": "name"
-            },
-            {
                 "name": "value",
-                "type": "STRING",
-                "mode": "NULLABLE",
-                "description": "value"
+                "type": "INTEGER"
             },
             {
-                "name": "url",
-                "type": "STRING",
                 "mode": "NULLABLE",
-                "description": "url"
+                "name": "text",
+                "type": "STRING"
             }
-        ]
+        ],
+        "mode": "NULLABLE",
+        "name": "quantity_sold",
+        "type": "RECORD"
     },
     {
-        "name": "status",
-        "type": "NUMERIC",
-        "mode": "NULLABLE"
+        "mode": "NULLABLE",
+        "name": "seller",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "review_count",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "url_path",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "thumbnail_width",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "meta_description",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "discount_rate",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "badges_new",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "is_visible",
+                "type": "BOOLEAN"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "add_on_information_url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "list_price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "is_default_select_addon",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "add_on_information_title",
+                "type": "STRING"
+            },
+            {
+                "mode": "REPEATED",
+                "name": "add_on_description_list",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "thumbnail_url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "add_on_description",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "add_on",
+        "type": "RECORD"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "store_id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "product_id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "logo",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "link",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "other_sellers",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "name",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "sku",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "type",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "favourite_count",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "promitions",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "slug",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "brand",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "order_count",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "bundle_deal",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "progress_image_status",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "meta_keywords",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "brand_name",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_tier_pricing_eligible",
+        "type": "BOOLEAN"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "has_ebook",
+        "type": "BOOLEAN"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "fulfillment_type",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "product_virtual_type",
+                "type": "STRING"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "inventory",
+        "type": "RECORD"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "qty",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "preorder_date",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "min_sale_qty",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "max_sale_qty",
+                "type": "INTEGER"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "stock_item",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "INTEGER"
     }
 ]

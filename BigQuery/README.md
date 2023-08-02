@@ -30,3 +30,8 @@ bq mk \
 ```
 bq rm -f -t $PROJECT_ID:$DATASET_ID.$TABLE_ID
 ```
+
+6. Show schema fields
+```
+bq show --format=prettyjson  | jq '.schema.fields' 
+```
