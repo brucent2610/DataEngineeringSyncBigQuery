@@ -17,7 +17,66 @@ jq 'del(._id)' -c output.json > data_no_id.json
 3. Create Instance
 ```
 gcloud compute instances create $VM_NAME \
+  --machine-type=e2-micro \
+  --zone asia-southeast1-b \
   --image-project=ubuntu-os-cloud \
   --image-family=ubuntu-2204-lts \
   --metadata-from-file=startup-script=startup.sh
+```
+
+4. Create User MongoDB
+```
+db.createUser(
+    {
+        user: "ecommerce",
+        pwd: "azrArnHDqbY93QGU",
+        roles: [
+            {
+                role: "readWrite",
+                db: "ecommerce"
+            }
+        ]
+    }
+);
+db.createUser(
+    {
+        user: "ecommerce2",
+        pwd: "azrArnHDqbY93QGU",
+        roles: [
+            {
+                role: "readWrite",
+                db: "ecommerce"
+            }
+        ]
+    }
+);
+db.createUser({
+    user: "admin",
+    pwd: "nZ5b8ZA4vBaV3MeQ",
+    roles: [ 
+        { 
+            role: "userAdminAnyDatabase", 
+            db: "admin" 
+        } 
+    ]
+})
+```
+
+5. Open Mongo Port to Connect client
+```
+gcloud compute firewall-rules create rule-allow-tcp-27017 --source-ranges 0.0.0.0/0 --target-tags allow-tcp-27017 --allow tcp:27017
+gcloud compute instances add-tags $VM_NAME --tags allow-tcp-27017
+gcloud compute firewall-rules list
+```
+
+6. Connect URI MongoDB in client
+```
+mongosh mongodb://ecommerce:azrArnHDqbY93QGU@34.143.184.177:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.3&tls=true&authSource=ecommerce
+```
+
+7. Restore Database
+```
+mongorestore -u=ecommerce2 -p=azrArnHDqbY93QGU --authenticationDatabase=admin --port=27017 --host=34.143.184.177 -d=ecommerce --gzip ./dump
+
+mongorestore -u=admin -p=nZ5b8ZA4vBaV3MeQ --authenticationDatabase=ecommerce --authenticationMechanism SCRAM-SHA-1 --host=34.143.184.177 -d=ecommerce --gzip ./dump
 ```
