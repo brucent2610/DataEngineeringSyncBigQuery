@@ -11,5 +11,5 @@ jq 'del(._id)' -c output.json > data_no_id.json
 
 3. 
 ```
-bq show --format=prettyjson bigquery-public-data:samples.wikipedia | jq '.schema.fields' 
+bq show --format=prettyjson  | jq '.schema.fields' 
 ```
