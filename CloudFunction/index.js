@@ -45,7 +45,7 @@ exports.index = async (file, context) => {
 	const filename = file.name;
 	
 	const metadata = {
-		sourceFormat: 'JSON',
+		sourceFormat: 'NEWLINE_DELIMITED_JSON',
 		autodetect: true
 	};
 
