@@ -1029,9 +1029,21 @@
         "type": "RECORD"
     },
     {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            }
+        ],
         "mode": "NULLABLE",
         "name": "seller",
-        "type": "STRING"
+        "type": "RECORD"
     },
     {
         "mode": "NULLABLE",
