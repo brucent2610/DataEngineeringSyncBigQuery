@@ -46,7 +46,9 @@ exports.index = async (file, context) => {
 	
 	const metadata = {
 		sourceFormat: 'NEWLINE_DELIMITED_JSON',
-		schema: schema
+		schema: {
+			fields: schema
+		}
 	};
 
 	// Load data from a Google Cloud Storage file into the table
