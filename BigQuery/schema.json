@@ -40,6 +40,41 @@
             },
             {
                 "mode": "NULLABLE",
+                "name": "chu_ky",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "do_kinh",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "size_nhan_nam",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "size_nhan_nu",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "kieu_dang_gift",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "color",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "kich_thuoc_cau_hinh",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
                 "name": "option2",
                 "type": "STRING"
             },
@@ -143,11 +178,6 @@
         "mode": "NULLABLE",
         "name": "error",
         "type": "BOOLEAN"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "progress_mysql_status",
-        "type": "INTEGER"
     },
     {
         "mode": "NULLABLE",
@@ -276,11 +306,6 @@
         "type": "STRING"
     },
     {
-        "mode": "REPEATED",
-        "name": "product_links",
-        "type": "STRING"
-    },
-    {
         "mode": "NULLABLE",
         "name": "meta_title",
         "type": "STRING"
@@ -333,9 +358,31 @@
     {
         "fields": [
             {
-                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "icon",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "summary",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "title",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "url",
+                        "type": "STRING"
+                    }
+                ],
+                "mode": "REPEATED",
                 "name": "details",
-                "type": "STRING"
+                "type": "RECORD"
             },
             {
                 "mode": "NULLABLE",
@@ -1071,9 +1118,61 @@
         "type": "INTEGER"
     },
     {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "placement",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "code",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "type",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "icon",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "icon_width",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "icon_height",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "text_color",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "background_color",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "href",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "text",
+                "type": "STRING"
+            }
+        ],
         "mode": "REPEATED",
         "name": "badges_new",
-        "type": "STRING"
+        "type": "RECORD"
     },
     {
         "fields": [
@@ -1314,5 +1413,252 @@
         "mode": "NULLABLE",
         "name": "id",
         "type": "INTEGER"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "category_ids",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "response",
+        "type": "STRING"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "slug",
+                "type": "STRING"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "authors",
+        "type": "RECORD"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "type",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "name",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "thumbnail_url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "list_price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "inventory_status",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "is_free_gift",
+                "type": "BOOLEAN"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "is_installation_package",
+                "type": "BOOLEAN"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "product_links",
+        "type": "RECORD"
+    },
+    {
+        "mode": "REPEATED",
+        "name": "base_url",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "category_id",
+        "type": "INTEGER"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "rating",
+        "type": "FLOAT"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "deal_id",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "is_hot_deal",
+                "type": "BOOLEAN"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "type",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "qty",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "max_sale_qty",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "qty_ordered",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "special_to_date",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "list_price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "original_price",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "discount_rate",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "progress",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "progress_text",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "v5",
+                "type": "INTEGER"
+            }
+        ],
+        "mode": "REPEATED",
+        "name": "deal_specs",
+        "type": "RECORD"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "is_inventory_clearance_sale",
+        "type": "BOOLEAN"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "content",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "title",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "type",
+                "type": "STRING"
+            },
+            {
+                "fields": [
+                    {
+                        "mode": "NULLABLE",
+                        "name": "btn_accept",
+                        "type": "STRING"
+                    },
+                    {
+                        "mode": "NULLABLE",
+                        "name": "btn_cancel",
+                        "type": "STRING"
+                    }
+                ],
+                "mode": "NULLABLE",
+                "name": "button",
+                "type": "RECORD"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "confirm_over_age",
+        "type": "RECORD"
+    },
+    {
+        "fields": [
+            {
+                "mode": "NULLABLE",
+                "name": "value",
+                "type": "INTEGER"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "url",
+                "type": "STRING"
+            },
+            {
+                "mode": "NULLABLE",
+                "name": "type",
+                "type": "STRING"
+            }
+        ],
+        "mode": "NULLABLE",
+        "name": "has_other_fee",
+        "type": "RECORD"
     }
 ]
