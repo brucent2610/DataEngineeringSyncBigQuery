@@ -40,3 +40,6 @@ Data is uploaded and used in MongoDB in VM
 - [Prepare the Cloud Function](https://github.com/brucent2610/DataEngineeringSyncBigQuery/blob/main/CloudFunction/README.md)
 - [Prepare the VM](https://github.com/brucent2610/DataEngineeringSyncBigQuery/blob/main/VM/README.md)
 
+# Result data in DataStudio
+[Reports](https://i.imgur.com/6fb23fJ.png)
+
