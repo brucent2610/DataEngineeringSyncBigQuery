@@ -101,3 +101,10 @@ gcloud compute instances start $VM_NAME --zone=${ZONE}
 ```
 gcloud compute instances set-service-account $VM_NAME --scopes=storage-rw --zone=${ZONE}
 ```
+
+12. Prepare crontab
+```
+crontab -e
+# add new line in file
+0 20 * * * cd ~/tiki && sh ./schedule.sh > ./logs/$BACKUP_TIME.log
+```

@@ -27,10 +27,16 @@ Data is uploaded and used in MongoDB in VM
 + Top 10 sellers which most products
 
 # Architecture
-- [Architecture Version 01](https://i.imgur.com/hXIqMrh.png)
+- [Architecture Version 01](https://i.imgur.com/dfpjDDR.png)
 
 # Reference
 - https://cloud.google.com/functions/docs/reference/iam/roles
 - https://cloud.google.com/functions/docs/tutorials/storage
 - https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv#bigquery_load_table_partitioned-nodejs
+
+# How to use
+- [Prepare the GCS](https://github.com/brucent2610/DataEngineeringSyncBigQuery/tree/main/GCS/README.md)
+- [Prepare the BigQuery](https://github.com/brucent2610/DataEngineeringSyncBigQuery/blob/main/BigQuery/README.md)
+- [Prepare the Cloud Function](https://github.com/brucent2610/DataEngineeringSyncBigQuery/blob/main/CloudFunction/README.md)
+- [Prepare the VM](https://github.com/brucent2610/DataEngineeringSyncBigQuery/blob/main/VM/README.md)
 
