@@ -43,3 +43,6 @@ Data is uploaded and used in MongoDB in VM
 # Result data in DataStudio
 [Reports](https://i.imgur.com/6fb23fJ.png)
 
+# Note 
+- Hướng tới file Avro và Parquet
+
